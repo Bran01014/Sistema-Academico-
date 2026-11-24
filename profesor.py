@@ -37,7 +37,7 @@ class Profesor(Persona):
         return f"Profesor [{self._id_nomina}]: {self._nombre} | Especialidad: {self._especialidad} | Materias: {materias}"
 
     def a_dict(self):
-        """Convierte el profesor a diccionario para guardarlo."""
+        """Convierte el profesor a diccionario para Guardarlo."""
         return {
             "tipo": "Profesor",
             "nombre": self._nombre,
