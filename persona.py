@@ -8,7 +8,7 @@ class Persona:
         """Inicializa los datos basicos de la persona."""
         if not nombre or not str(nombre).strip():
             raise ValueError("El nombre no puede estar vacio. Ingrese un nombre.")
-        if not isinstance(edad, int) or edad <= 0:
+        if not isinstance(edad, int) or isinstance(edad, bool) or edad <= 0:
             raise ValueError("La edad debe ser un entero positivo.")
         if not correo or "@" not in str(correo):
             raise ValueError("El correo no es valido.")
