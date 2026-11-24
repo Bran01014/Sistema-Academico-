@@ -23,7 +23,7 @@ class Alumno(Persona):
 
     def registrar_nota(self, nota):
         """Agrega una nota valida entre 0 y 100."""
-        if not isinstance(nota, (int, float)) or nota < 0 or nota > 100:
+        if not isinstance(nota, (int, float)) or isinstance(nota, bool) or nota < 0 or nota > 100:
             raise ValueError("La nota no es valida. Debe estar entre 0 y 100.")
         self._notas.append(float(nota))
 
