@@ -27,7 +27,7 @@ def main():
         sistema.registrar(a2)
 
         curso = Curso("POO", 2, prof)
-        sistema.agregar_curso(curso)
+        sistema.registrar(curso)
 
         sistema.asignar("A001", "POO")
         sistema.asignar("A002", "POO")
