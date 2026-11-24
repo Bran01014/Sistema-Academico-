@@ -11,7 +11,7 @@ class Curso:
         """Crea un curso validando que tenga profesor asignado y cupo valido."""
         if not nombre_curso or not str(nombre_curso).strip():
             raise ValueError("El nombre del curso no puede estar vacio.")
-        if not isinstance(cupo_maximo, int) or cupo_maximo <= 0:
+        if not isinstance(cupo_maximo, int) or isinstance(cupo_maximo, bool) or cupo_maximo <= 0:
             raise ValueError("El cupo maximo debe ser mayor a 0.")
         if docente is None or not isinstance(docente, Profesor):
             raise ValueError("No se puede crear un curso sin profesor asignado.")
